@@ -833,16 +833,28 @@
 /*** Color Variables ***/
 :root {
   --primary: #FFC107;      /* Yellow */
-  --secondary: #256029;    /* Deep Green, change if you prefer navy or purple */
-  --accent: #FFFFFF;       /* White */
-  --text-dark: #222222;    /* For headings/text */
-  --text-light: #FFFFFF;   /* For text on dark bg */
+  --navbar-bg: #FFC107;
+  --navbar-text: #232323; /* Dark text for contrast */
 }
 
-/* Navbar and footer backgrounds */
-.bg-dark, .navbar-dark, .footer, .copyright {
-  background-color: var(--secondary) !important;
-  color: var(--text-light) !important;
+/* Navbar background and text */
+.bg-dark, .navbar-dark {
+  background-color: var(--navbar-bg) !important;
+  color: var(--navbar-text) !important;
+}
+
+.navbar .navbar-brand,
+.navbar .nav-link,
+.navbar .navbar-toggler {
+  color: var(--navbar-text) !important;
+}
+
+.navbar .nav-link.active,
+.navbar .nav-link:focus,
+.navbar .nav-link:hover {
+  color: #fff !important;
+  background: rgba(0,0,0,0.08);
+  border-radius: 0.5rem;
 }
 
 /* Primary buttons and highlights */
