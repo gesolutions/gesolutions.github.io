@@ -179,6 +179,44 @@
     }
 }
 
+/* Responsive navbar brand */
+.navbar-brand {
+  min-width: 0;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.navbar-brand img {
+  height: 36px;
+  width: auto;
+  max-width: 40px;
+  margin-right: 8px;
+}
+
+.brand-oneline {
+  white-space: nowrap;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #232323;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 70vw;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+@media (max-width: 576px) {
+  .navbar-brand img {
+    height: 28px;
+    max-width: 28px;
+    margin-right: 6px;
+  }
+  .brand-oneline {
+    font-size: 1rem;
+    max-width: 60vw;
+  }
+}
+
 /*** Navbar End ***/
 
 
