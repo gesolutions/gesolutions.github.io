@@ -179,46 +179,6 @@
     }
 }
 
-/* Responsive navbar brand */
-.navbar-brand {
-  min-width: 0;
-  max-width: 100%;
-  overflow: hidden;
-  flex-shrink: 1;
-}
-
-.navbar-brand img {
-  height: 32px;
-  width: auto;
-  max-width: 32px;
-  margin-right: 6px;
-  flex-shrink: 0;
-}
-
-.brand-oneline {
-  white-space: nowrap;
-  font-size: 1.2rem;
-  font-weight: 700;
-  color: #232323;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  max-width: 70vw;
-  display: inline-block;
-  vertical-align: middle;
-}
-
-@media (max-width: 576px) {
-  .navbar-brand img {
-    height: 24px;
-    max-width: 24px;
-    margin-right: 4px;
-  }
-  .brand-oneline {
-    font-size: 1rem;
-    max-width: 55vw;
-  }
-}
-
 /*** Navbar End ***/
 
 
