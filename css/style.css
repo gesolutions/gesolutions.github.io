@@ -829,3 +829,44 @@
         white-space: normal;
     }
 }
+
+/*** Color Variables ***/
+:root {
+  --primary: #FFC107;      /* Yellow */
+  --secondary: #256029;    /* Deep Green, change if you prefer navy or purple */
+  --accent: #FFFFFF;       /* White */
+  --text-dark: #222222;    /* For headings/text */
+  --text-light: #FFFFFF;   /* For text on dark bg */
+}
+
+/* Navbar and footer backgrounds */
+.bg-dark, .navbar-dark, .footer, .copyright {
+  background-color: var(--secondary) !important;
+  color: var(--text-light) !important;
+}
+
+/* Primary buttons and highlights */
+.btn-primary, .bg-primary, .text-primary {
+  background-color: var(--primary) !important;
+  border-color: var(--primary) !important;
+  color: var(--text-dark) !important;
+}
+
+/* For hover/focus states */
+.btn-primary:hover, .btn-primary:focus {
+  background-color: #e6ac00 !important;
+  border-color: #e6ac00 !important;
+  color: var(--text-dark) !important;
+}
+
+/* Remove all uses of .btn-dark, .bg-dark for theme, use .btn-primary or .bg-primary instead */
+
+/* Light backgrounds */
+.bg-light {
+  background-color: #fffbe6 !important; /* subtle yellowish white */
+}
+
+/* Headings and highlights */
+.text-dark {
+  color: var(--text-dark) !important;
+}
