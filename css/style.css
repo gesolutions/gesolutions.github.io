@@ -911,3 +911,188 @@
 }
 
 
+
+/* WhatsApp floating button */
+.whatsapp-float {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: #25D366;
+    color: #fff;
+    border-radius: 50%;
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.2rem;
+    z-index: 2000;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+    transition: background 0.2s;
+    text-decoration: none;
+}
+.whatsapp-float:hover {
+    background: #128C7E;
+    color: #fff;
+}
+
+/* Sidebar positioning & appearance */
+#servicesSidebar {
+  position: absolute;
+  top: 40px; /* hero section-er top er shathe align korte */
+  right: 20px;
+  width: 270px;
+  background: #fffbea;
+  border-radius: 16px 0 0 16px;
+  box-shadow: -2px 4px 24px #ffc10742;
+  padding: 32px 20px 28px 28px;
+  z-index: 100;
+  overflow: visible;    /* scrollbar off */
+  height: auto;         /* content onujayi height */
+}
+
+#servicesSidebar:hover,
+#servicesSidebar:focus-within {
+  transform: translateX(0);
+}
+
+/* Heading style */
+.sidebar-header {
+  font-size: 27px;
+  color: #ffc107;
+  text-align: left;
+  margin-bottom: 25px;
+  border-bottom: 2px solid #ffd600;
+  padding-bottom: 8px;
+  letter-spacing: .5px;
+}
+
+/* Each service link style */
+.service-link {
+  display: block;
+  font-size: 22px;
+  color: #222;
+  padding: 11px 10px 11px 6px;
+  margin-bottom: 12px;
+  border-radius: 7px;
+  text-decoration: none;
+  font-weight: 500;
+  background: linear-gradient(to right,#fffbea,#ffe06616 80%,#fffbea 98%);
+  position: relative;
+  left: 16px;
+  opacity: 0;
+  transform: translateX(90px);
+  transition: all .37s cubic-bezier(.42,1.6,.15,.97);
+}
+
+/* Animate links (appear with sidebar) */
+#servicesSidebar:hover .service-link,
+#servicesSidebar:focus-within .service-link {
+  left: 0;
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Hover effect for service links */
+.service-link:hover,
+.service-link:focus {
+  background: #ffe066;
+  color: #003366;
+  font-weight: bold;
+  border-left: 4px solid #ffc107;
+  box-shadow: 0 2px 14px #ffc10718;
+  cursor: pointer;
+}
+
+/* Animated Yellow Sidebar Styles */
+.animated-services-sidebar {
+  background: #fffbe6;
+  border-radius: 32px;
+  box-shadow: 0 4px 24px #ffc10733;
+  padding: 24px 32px 24px 32px;
+  max-width: 340px;
+  margin: 32px auto 0 auto;
+  animation: fadeInRight 1s;
+}
+/* Desktop view default sidebar */
+#servicesSidebar {
+  display: block;
+}
+
+/* Mobile view: hide sidebar completely */
+@media (max-width: 768px) {
+  #servicesSidebar {
+    display: none;
+    position: static;
+    width: 100%;
+    box-shadow: none;
+    padding: 16px;
+    background: transparent;
+  }
+}
+.services-header {
+  background: #ffc107;
+  color: #232323;
+  font-weight: bold;
+  font-size: 1.25rem;
+  border-radius: 24px;
+  text-align: center;
+  padding: 12px 0;
+  margin-bottom: 24px;
+  letter-spacing: 1px;
+  box-shadow: 0 2px 8px #ffc10744;
+  animation: bounceIn 1.2s;
+}
+.services-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.service-item {
+  display: flex;
+  align-items: center;
+  font-size: 1.08rem;
+  font-weight: 600;
+  color: #232323;
+  margin-bottom: 18px;
+  transition: background 0.2s, color 0.2s;
+  border-radius: 16px;
+  padding: 8px 12px;
+  cursor: pointer;
+  animation: slideInLeft 0.7s;
+}
+.service-item:hover {
+  background: #ffe066;
+  color: #b94a48;
+}
+.service-item .dot {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  margin-right: 14px;
+  border-radius: 50%;
+  background: #ffc107;
+  border: 3px solid #fffbe6;
+  box-shadow: 0 0 0 2px #ffc10744;
+  animation: pulseDot 1.5s infinite;
+}
+
+/* Animations */
+@keyframes fadeInRight {
+  from { opacity: 0; transform: translateX(60px);}
+  to { opacity: 1; transform: translateX(0);}
+}
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-40px);}
+  to { opacity: 1; transform: translateX(0);}
+}
+@keyframes bounceIn {
+  0% { transform: scale(0.8);}
+  60% { transform: scale(1.1);}
+  100% { transform: scale(1);}
+}
+@keyframes pulseDot {
+  0% { box-shadow: 0 0 0 0 #ffc10744;}
+  70% { box-shadow: 0 0 0 8px #ffc10722;}
+  100% { box-shadow: 0 0 0 0 #ffc10744;}
+}
