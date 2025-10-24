@@ -30,8 +30,8 @@
     });
 
 
-    // Blog carousel
-    $(".blog-carousel").owlCarousel({
+    // Team carousel
+    $(".team-carousel").owlCarousel({
         autoplay: true,
         smartSpeed: 1000,
         center: false,
@@ -52,9 +52,6 @@
                 items:2
             },
             992:{
-                items:2
-            },
-            1200:{
                 items:3
             }
         }
@@ -62,18 +59,16 @@
 
 
     // Testimonial carousel
+
     $(".testimonial-carousel").owlCarousel({
         autoplay: true,
         smartSpeed: 1500,
         center: true,
         dots: true,
         loop: true,
-        margin: 50,
+        margin: 0,
         nav : true,
-        navText : [
-            '<i class="bi bi-arrow-left"></i>',
-            '<i class="bi bi-arrow-right"></i>'
-        ],
+        navText: false,
         responsiveClass: true,
         responsive: {
             0:{
@@ -86,13 +81,29 @@
                 items:2
             },
             992:{
-                items:2
-            },
-            1200:{
                 items:3
             }
         }
     });
+
+
+     // Fact Counter
+
+     $(document).ready(function(){
+        $('.counter-value').each(function(){
+            $(this).prop('Counter',0).animate({
+                Counter: $(this).text()
+            },{
+                duration: 2000,
+                easing: 'easeInQuad',
+                step: function (now){
+                    $(this).text(Math.ceil(now));
+                }
+            });
+        });
+    });
+
+
 
 })(jQuery);
 
